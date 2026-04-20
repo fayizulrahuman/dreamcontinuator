@@ -14,7 +14,7 @@ const GEMINI_API_KEY = "AIzaSyBvNKi2yvxiB-JweStjq6az__l-RssU9pM"; // Replace wit
 const GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta";
 
 // Add these lines below
-const GEMINI_MODEL = "gemini-flash-latest";
+const GEMINI_MODEL = "gemini-1.5-pro";
 
 // Optional: Rate limit awareness (free tier)
 const GEMINI_RATE_LIMITS = {
