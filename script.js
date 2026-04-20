@@ -274,8 +274,7 @@ if(page === 'result') {
   document.getElementById('result-mood').innerText = dreamData.mood;
   document.getElementById('result-fragment').innerText = dreamData.fragment;
   document.getElementById('result-continuation').innerText = dreamData.continuation;
-
-  setupTranslator(dreamData.continuation);
+  setupTranslator(dreamData.fragment + "\n\n" + dreamData.continuation);
 }
 
 // --- Translator Logic ---
@@ -423,7 +422,7 @@ function openModal(dream) {
   document.getElementById('modal-continuation').innerText = dream.continuation;
   
   updateMoodGlow(dream.mood);
-  setupTranslator(dream.continuation);
+  setupTranslator(dream.fragment + "\n\n" + dream.continuation);
   
   modal.classList.add('active');
 }
