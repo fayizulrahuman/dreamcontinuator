@@ -108,7 +108,7 @@ if(page === 'login') {
   const confirmGrp = document.getElementById('confirm-password-group');
   const forgotLink = document.getElementById('forgot-password-link');
 
-  toggleLink.addEventListener('click', (e) => {
+  function handleToggle(e) {
     e.preventDefault();
     isSignUp = !isSignUp;
     hideError('error-message');
@@ -123,9 +123,10 @@ if(page === 'login') {
       toggleText.innerHTML = `Don't have an account? <a href="#" id="toggle-mode-link">Sign Up</a>`;
       document.getElementById('confirm-password').removeAttribute('required');
     }
-    // rebind
-    document.getElementById('toggle-mode-link').addEventListener('click', toggleLink.onclick);
-  });
+    document.getElementById('toggle-mode-link').addEventListener('click', handleToggle);
+  }
+
+  toggleLink.addEventListener('click', handleToggle);
 
   googleBtn.addEventListener('click', () => {
     showSpinner();
@@ -227,7 +228,7 @@ if(page === 'log-dream') {
         },
         body: JSON.stringify({
           contents: [{
-            parts: [{ text: `System: You are a dream weaver. Continue the user's dream fragment in second person, present tense, in 3–5 vivid poetic paragraphs. Match the mood: ${selectedMood}. Do not explain — just inhabit the dream. Begin immediately.\n\nDream fragment: ${fragment}` }]
+            parts: [{ text: `System: You are a dream weaver. Continue the user's dream fragment in second person, present tense. Use simple language for easy understanding. Keep it to exactly 2 to 3 paragraphs. Match the mood: ${selectedMood}. Do not explain — just inhabit the dream. Begin immediately.\n\nDream fragment: ${fragment}` }]
           }],
           generationConfig: {
             maxOutputTokens: 1000
