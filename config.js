@@ -10,7 +10,7 @@ const firebaseConfig = {
 };
 
 // Gemini API Configuration
-const GEMINI_API_KEY = "AIzaSyDQD3lVAJoQ-v6ZixxMrFosCf73YC0mMyM"; // Replace with your actual key
+const GEMINI_API_KEY = "AIzaSyBZEGRT95m1YPdoO8f4gzJke2vxro8-dis"; // Replace with your actual key
 const GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta";
 
 // Add these lines below
