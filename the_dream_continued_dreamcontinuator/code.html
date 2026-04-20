@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DreamContinuator | The Celestial Archive</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&amp;family=Courier+Prime:wght@400;700&amp;family=Space+Grotesk:wght@300;500&amp;family=Newsreader:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed-dim": "#cf9fff",
+                    "surface-variant": "#23233b",
+                    "primary-container": "#bc80f8",
+                    "surface-container": "#181829",
+                    "secondary-fixed-dim": "#f9d04b",
+                    "tertiary-fixed-dim": "#8dddd3",
+                    "on-error-container": "#ff97a3",
+                    "on-error": "#490013",
+                    "surface-tint": "#c890ff",
+                    "surface-container-low": "#121221",
+                    "on-tertiary-fixed": "#00443e",
+                    "on-tertiary-container": "#005852",
+                    "inverse-on-surface": "#545463",
+                    "error": "#fd6f85",
+                    "outline-variant": "#46465f",
+                    "surface-container-highest": "#23233b",
+                    "tertiary-dim": "#8dddd3",
+                    "primary-dim": "#be83fa",
+                    "on-secondary-fixed": "#4e3d00",
+                    "surface-dim": "#0d0d19",
+                    "primary-fixed": "#d9b1ff",
+                    "surface-container-lowest": "#000000",
+                    "error-dim": "#c8475d",
+                    "primary": "#c890ff",
+                    "surface-container-high": "#1e1e32",
+                    "surface": "#0d0d19",
+                    "on-primary": "#400072",
+                    "secondary-fixed": "#ffe086",
+                    "tertiary": "#a9faef",
+                    "inverse-primary": "#7c41b5",
+                    "secondary": "#eac33e",
+                    "tertiary-container": "#9bebe1",
+                    "on-tertiary": "#00625a",
+                    "surface-bright": "#292944",
+                    "on-primary-container": "#2e0055",
+                    "outline": "#74738f",
+                    "on-secondary-container": "#c5a018",
+                    "on-secondary": "#4f3e00",
+                    "on-secondary-fixed-variant": "#705900",
+                    "on-primary-fixed-variant": "#602399",
+                    "background": "#0d0d19",
+                    "inverse-surface": "#fcf8ff",
+                    "secondary-container": "#302400",
+                    "on-background": "#e5e3ff",
+                    "secondary-dim": "#dbb530",
+                    "on-surface": "#e5e3ff",
+                    "on-surface-variant": "#aaa8c6",
+                    "error-container": "#8a1632",
+                    "tertiary-fixed": "#9bebe1",
+                    "on-primary-fixed": "#3d006d",
+                    "on-tertiary-fixed-variant": "#00635c"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Newsreader", "serif"],
+                    "body": ["Cormorant Garamond", "serif"],
+                    "label": ["Courier Prime", "monospace"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+        }
+        body {
+            background-color: #0d0d19;
+            color: #e5e3ff;
+            font-family: 'Cormorant Garamond', serif;
+        }
+    </style>
+</head>
+<body class="min-h-screen pb-32 overflow-x-hidden selection:bg-primary/30">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 bg-[#0d0d19]/80 backdrop-blur-xl flex justify-between items-center px-6 py-4 shadow-[0_0_50px_rgba(200,144,255,0.08)]">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#c084fc]" data-icon="nights_stay">nights_stay</span>
+<h1 class="text-2xl font-serif italic text-[#c084fc]">DreamContinuator</h1>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden md:flex gap-8">
+<a class="text-[#c084fc] font-bold font-mono text-xs tracking-widest uppercase" href="#">Result</a>
+<a class="text-slate-400 font-mono text-xs tracking-widest uppercase hover:text-[#c084fc] transition-all" href="#">Archive</a>
+<a class="text-slate-400 font-mono text-xs tracking-widest uppercase hover:text-[#c084fc] transition-all" href="#">Observatory</a>
+</div>
+<button class="material-symbols-outlined text-slate-400 hover:bg-white/5 p-2 rounded-full transition-all" data-icon="logout">logout</button>
+</div>
+</header>
+<main class="max-w-screen-xl mx-auto pt-32 px-6 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+<!-- Left Column: The Fragment & AI Continuation -->
+<div class="lg:col-span-7 space-y-12">
+<!-- Fragment blockquote -->
+<section class="relative">
+<div class="absolute -left-8 -top-4 opacity-10 select-none">
+<span class="text-9xl font-serif">“</span>
+</div>
+<blockquote class="text-3xl md:text-4xl font-serif italic leading-relaxed text-on-surface-variant">
+                    I was walking through a library where the books were made of frozen smoke. Every time I touched a spine, the title evaporated into a silver mist that smelled of ancient rain and forgotten childhood birthdays...
+                </blockquote>
+<div class="mt-6 flex items-center gap-4">
+<div class="h-px w-12 bg-outline-variant/30"></div>
+<span class="font-label text-[10px] tracking-[0.2em] text-tertiary-dim uppercase">Original Fragment Logged 03:14 AM</span>
+</div>
+</section>
+<!-- AI Continuation Card -->
+<div class="glass-panel rounded-lg p-8 md:p-12 relative overflow-hidden border border-white/5 shadow-2xl">
+<div class="absolute top-0 right-0 p-4">
+<span class="material-symbols-outlined text-primary/40 text-4xl" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<h3 class="font-label text-[10px] tracking-[0.3em] uppercase text-primary-fixed-dim mb-8">Celestial Continuation</h3>
+<div class="space-y-6 text-xl md:text-2xl leading-relaxed font-body text-on-surface/90">
+<p>The mist coalesced into a staircase of obsidian light. As you climbed, the scent of rain transformed into the sound of a cello playing underwater. At the summit stood a clockmaker whose face was a shifting nebula, assembling hours out of starlight and dragonfly wings.</p>
+<p>He handed you a key forged from your first memory. "Keep this," he whispered, his voice vibrating in your marrow. "This opens the door to the waking world, but only if you leave your shadow behind."</p>
+</div>
+<div class="mt-12 flex flex-wrap gap-3">
+<span class="px-4 py-1.5 rounded-full bg-primary/10 text-primary-fixed-dim font-label text-[10px] tracking-widest uppercase">Surreal</span>
+<span class="px-4 py-1.5 rounded-full bg-secondary/10 text-secondary-fixed-dim font-label text-[10px] tracking-widest uppercase">Wondrous</span>
+<span class="px-4 py-1.5 rounded-full bg-tertiary/10 text-tertiary-dim font-label text-[10px] tracking-widest uppercase">Melancholic</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Translation & Actions -->
+<div class="lg:col-span-5 space-y-8">
+<!-- Translate Panel -->
+<section class="bg-surface-container-low rounded-lg p-8 border border-white/5">
+<div class="flex items-center gap-4 mb-8">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-3xl" data-icon="language">language</span>
+<h2 class="text-xl font-headline italic">Translate This Dream</h2>
+</div>
+<div class="relative group mb-6">
+<div class="absolute inset-y-0 left-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-slate-500 text-xl" data-icon="search">search</span>
+</div>
+<input class="w-full bg-surface-container-lowest border-b border-outline-variant/20 focus:border-primary py-4 pl-12 pr-4 font-label text-xs tracking-widest uppercase focus:ring-0 transition-colors" placeholder="SEARCH DIALECTS..." type="text"/>
+</div>
+<div class="h-48 overflow-y-auto space-y-1 pr-2 custom-scrollbar">
+<button class="w-full flex items-center justify-between p-3 rounded hover:bg-white/5 transition-all group">
+<div class="flex items-center gap-3">
+<span class="text-lg">🇫🇷</span>
+<span class="font-label text-xs tracking-wider uppercase text-slate-400 group-hover:text-primary">French (Français)</span>
+</div>
+<span class="material-symbols-outlined text-slate-700 text-sm opacity-0 group-hover:opacity-100" data-icon="chevron_right">chevron_right</span>
+</button>
+<button class="w-full flex items-center justify-between p-3 rounded bg-primary/5 group border-l-2 border-primary">
+<div class="flex items-center gap-3">
+<span class="text-lg">🇯🇵</span>
+<span class="font-label text-xs tracking-wider uppercase text-primary">Japanese (日本語)</span>
+</div>
+<span class="material-symbols-outlined text-primary text-sm" data-icon="check">check</span>
+</button>
+<button class="w-full flex items-center justify-between p-3 rounded hover:bg-white/5 transition-all group">
+<div class="flex items-center gap-3">
+<span class="text-lg">🇮🇹</span>
+<span class="font-label text-xs tracking-wider uppercase text-slate-400 group-hover:text-primary">Italian (Italiano)</span>
+</div>
+<span class="material-symbols-outlined text-slate-700 text-sm opacity-0 group-hover:opacity-100" data-icon="chevron_right">chevron_right</span>
+</button>
+<button class="w-full flex items-center justify-between p-3 rounded hover:bg-white/5 transition-all group">
+<div class="flex items-center gap-3">
+<span class="text-lg">🇩🇪</span>
+<span class="font-label text-xs tracking-wider uppercase text-slate-400 group-hover:text-primary">German (Deutsch)</span>
+</div>
+<span class="material-symbols-outlined text-slate-700 text-sm opacity-0 group-hover:opacity-100" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</section>
+<!-- Translated Result Card -->
+<div class="relative bg-surface-container-high rounded-lg p-8 border border-white/5 shadow-xl">
+<div class="absolute -top-3 left-8 bg-surface-container-highest px-3 py-1 rounded-full border border-white/10 flex items-center gap-2">
+<span>🇯🇵</span>
+<span class="font-label text-[9px] tracking-widest uppercase text-on-surface-variant">Nihongo Translation</span>
+</div>
+<p class="text-lg font-serif leading-relaxed text-on-surface-variant/80 italic mb-4">
+                    霧は黒曜石の光の階段へと固まった。昇るにつれ、雨の香りは水中で演奏されるチェロの音へと変わった。頂上には、顔が移ろいゆく星雲の時計職人が立っており、星明かりとトンボの羽で時間を作り上げていた。
+                </p>
+<div class="flex justify-end">
+<button class="material-symbols-outlined text-slate-500 hover:text-primary transition-colors p-2" data-icon="content_copy">content_copy</button>
+</div>
+</div>
+<!-- Bottom Actions -->
+<div class="flex flex-col gap-4 pt-4">
+<button class="w-full py-5 rounded-full bg-gradient-to-r from-primary to-primary-dim text-on-primary font-label text-xs tracking-[0.2em] uppercase shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all">
+                    Log Another Dream
+                </button>
+<button class="w-full py-5 rounded-full border border-outline-variant/30 text-on-surface font-label text-xs tracking-[0.2em] uppercase hover:bg-white/5 transition-all">
+                    View Complete Archive
+                </button>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-2 bg-[#0d0d19]/90 backdrop-blur-2xl">
+<a class="flex flex-col items-center justify-center text-slate-500 hover:text-[#c084fc]" href="#">
+<span class="material-symbols-outlined" data-icon="auto_stories">auto_stories</span>
+<span class="font-mono text-[10px] tracking-widest uppercase mt-1">Archive</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 hover:text-[#c084fc]" href="#">
+<span class="material-symbols-outlined" data-icon="visibility">visibility</span>
+<span class="font-mono text-[10px] tracking-widest uppercase mt-1">Insights</span>
+</a>
+<div class="flex flex-col items-center justify-center bg-[#c084fc]/10 text-[#c084fc] rounded-full px-4 py-1">
+<span class="material-symbols-outlined" data-icon="auto_awesome" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="font-mono text-[10px] tracking-widest uppercase mt-1">Observatory</span>
+</div>
+<a class="flex flex-col items-center justify-center text-slate-500 hover:text-[#c084fc]" href="#">
+<span class="material-symbols-outlined" data-icon="person_search">person_search</span>
+<span class="font-mono text-[10px] tracking-widest uppercase mt-1">Profile</span>
+</a>
+</nav>
+<!-- Background Decoration -->
+<div class="fixed inset-0 -z-10 pointer-events-none overflow-hidden">
+<div class="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-primary/5 blur-[120px] rounded-full"></div>
+<div class="absolute bottom-[10%] left-[-5%] w-[400px] h-[400px] bg-tertiary/5 blur-[100px] rounded-full"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full opacity-[0.03]" style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 40px 40px;"></div>
+</div>
+</body></html>

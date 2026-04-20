@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DreamContinuator - Archive</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&amp;family=Courier+Prime:wght@400;700&amp;family=Space+Grotesk:wght@300;500;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed-dim": "#cf9fff",
+                    "surface-variant": "#23233b",
+                    "primary-container": "#bc80f8",
+                    "surface-container": "#181829",
+                    "secondary-fixed-dim": "#f9d04b",
+                    "tertiary-fixed-dim": "#8dddd3",
+                    "on-error-container": "#ff97a3",
+                    "on-error": "#490013",
+                    "surface-tint": "#c890ff",
+                    "surface-container-low": "#121221",
+                    "on-tertiary-fixed": "#00443e",
+                    "on-tertiary-container": "#005852",
+                    "inverse-on-surface": "#545463",
+                    "error": "#fd6f85",
+                    "outline-variant": "#46465f",
+                    "surface-container-highest": "#23233b",
+                    "tertiary-dim": "#8dddd3",
+                    "primary-dim": "#be83fa",
+                    "on-secondary-fixed": "#4e3d00",
+                    "surface-dim": "#0d0d19",
+                    "primary-fixed": "#d9b1ff",
+                    "surface-container-lowest": "#000000",
+                    "error-dim": "#c8475d",
+                    "primary": "#c890ff",
+                    "surface-container-high": "#1e1e32",
+                    "surface": "#0d0d19",
+                    "on-primary": "#400072",
+                    "secondary-fixed": "#ffe086",
+                    "tertiary": "#a9faef",
+                    "inverse-primary": "#7c41b5",
+                    "secondary": "#eac33e",
+                    "tertiary-container": "#9bebe1",
+                    "on-tertiary": "#00625a",
+                    "surface-bright": "#292944",
+                    "on-primary-container": "#2e0055",
+                    "outline": "#74738f",
+                    "on-secondary-container": "#c5a018",
+                    "on-secondary": "#4f3e00",
+                    "on-secondary-fixed-variant": "#705900",
+                    "on-primary-fixed-variant": "#602399",
+                    "background": "#0d0d19",
+                    "inverse-surface": "#fcf8ff",
+                    "secondary-container": "#302400",
+                    "on-background": "#e5e3ff",
+                    "secondary-dim": "#dbb530",
+                    "on-surface": "#e5e3ff",
+                    "on-surface-variant": "#aaa8c6",
+                    "error-container": "#8a1632",
+                    "tertiary-fixed": "#9bebe1",
+                    "on-primary-fixed": "#3d006d",
+                    "on-tertiary-fixed-variant": "#00635c"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Newsreader", "serif"],
+                    "body": ["Newsreader", "serif"],
+                    "label": ["Courier Prime", "monospace"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .star-field {
+            background-image: 
+                radial-gradient(1px 1px at 20px 30px, #eee, rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 40px 70px, #fff, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 50px 160px, #ddd, rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 90px 40px, #fff, rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 130px 80px, #fff, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 160px 120px, #ddd, rgba(0,0,0,0));
+            background-repeat: repeat;
+            background-size: 200px 200px;
+            opacity: 0.15;
+        }
+        .frosted-glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body min-h-screen selection:bg-primary-container/30">
+<!-- Star Field Background -->
+<div class="fixed inset-0 star-field pointer-events-none z-0"></div>
+<div class="fixed inset-0 bg-gradient-to-b from-[#0d0d19] via-[#121221] to-[#0d0d19] pointer-events-none z-0"></div>
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 bg-[#0d0d19]/80 backdrop-blur-xl shadow-[0_0_50px_rgba(200,144,255,0.08)] flex justify-between items-center px-6 py-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#c084fc] text-2xl" style="font-variation-settings: 'FILL' 1;">nights_stay</span>
+<h1 class="text-2xl font-serif italic text-[#c084fc] tracking-tight">DreamContinuator</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 transition-all duration-300">
+<span class="material-symbols-outlined text-slate-400">logout</span>
+</button>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="relative z-10 pt-28 pb-32 px-6 max-w-4xl mx-auto">
+<!-- Header Section -->
+<header class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div class="space-y-1">
+<p class="font-label text-xs uppercase tracking-[0.2em] text-primary-fixed-dim">The Repository</p>
+<h2 class="text-5xl md:text-6xl font-headline font-light italic leading-tight">Your Dream Universe</h2>
+</div>
+<div class="flex items-baseline gap-2 pb-2">
+<span class="text-4xl font-headline italic text-on-surface">142</span>
+<span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant">Fragments Logged</span>
+</div>
+</header>
+<!-- Search & Filter Mimic (Non-functional but for atmosphere) -->
+<div class="mb-10 flex gap-4 overflow-x-auto pb-4 no-scrollbar">
+<div class="flex-none px-6 py-2 rounded-full frosted-glass border border-white/5 text-primary-fixed-dim font-label text-[10px] tracking-widest uppercase">All Realms</div>
+<div class="flex-none px-6 py-2 rounded-full bg-white/5 text-on-surface-variant font-label text-[10px] tracking-widest uppercase hover:bg-white/10 transition-colors">Surreal</div>
+<div class="flex-none px-6 py-2 rounded-full bg-white/5 text-on-surface-variant font-label text-[10px] tracking-widest uppercase hover:bg-white/10 transition-colors">Melancholic</div>
+<div class="flex-none px-6 py-2 rounded-full bg-white/5 text-on-surface-variant font-label text-[10px] tracking-widest uppercase hover:bg-white/10 transition-colors">Nostalgic</div>
+</div>
+<!-- Archive List -->
+<div class="space-y-8">
+<!-- Dream Card 1 -->
+<article class="group relative frosted-glass rounded-lg p-8 md:p-10 transition-all duration-500 hover:bg-white/[0.06] overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 blur-3xl rounded-full -mr-16 -mt-16 group-hover:bg-primary/10 transition-colors"></div>
+<div class="relative flex flex-col md:flex-row gap-8 md:gap-16">
+<div class="md:w-32 flex-none">
+<p class="font-label text-xs text-on-surface-variant mb-4">OCT 24, 2023</p>
+<span class="inline-block px-3 py-1 rounded-full bg-[#c084fc]/10 text-[#c084fc] font-label text-[10px] tracking-widest uppercase">Surreal</span>
+</div>
+<div class="flex-1">
+<h3 class="text-2xl font-headline font-semibold mb-3 group-hover:text-primary-fixed-dim transition-colors">The City of Floating Ink</h3>
+<p class="text-lg leading-relaxed text-on-surface/80 italic line-clamp-2">The skyscrapers were made of frozen calligraphy, melting slowly into a sea of violet fog. Every word I spoke turned into a small, silver bird that flew toward the clocktower.</p>
+<div class="mt-6 flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="font-label text-[10px] uppercase tracking-widest text-primary">Recall Fragment</span>
+<span class="material-symbols-outlined text-sm text-primary">arrow_forward</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Dream Card 2 -->
+<article class="group relative frosted-glass rounded-lg p-8 md:p-10 transition-all duration-500 hover:bg-white/[0.06] overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-tertiary/5 blur-3xl rounded-full -mr-16 -mt-16 group-hover:bg-tertiary/10 transition-colors"></div>
+<div class="relative flex flex-col md:flex-row gap-8 md:gap-16">
+<div class="md:w-32 flex-none">
+<p class="font-label text-xs text-on-surface-variant mb-4">OCT 21, 2023</p>
+<span class="inline-block px-3 py-1 rounded-full bg-[#7ecec4]/10 text-[#7ecec4] font-label text-[10px] tracking-widest uppercase">Eerie</span>
+</div>
+<div class="flex-1">
+<h3 class="text-2xl font-headline font-semibold mb-3 group-hover:text-tertiary-dim transition-colors">The Library Without Lenses</h3>
+<p class="text-lg leading-relaxed text-on-surface/80 italic line-clamp-2">I found myself in a corridor of mirrors where my reflection was several seconds late. The books had no titles, only textures that whispered family secrets when touched.</p>
+<div class="mt-6 flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="font-label text-[10px] uppercase tracking-widest text-tertiary">Recall Fragment</span>
+<span class="material-symbols-outlined text-sm text-tertiary">arrow_forward</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Dream Card 3 -->
+<article class="group relative frosted-glass rounded-lg p-8 md:p-10 transition-all duration-500 hover:bg-white/[0.06] overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-secondary/5 blur-3xl rounded-full -mr-16 -mt-16 group-hover:bg-secondary/10 transition-colors"></div>
+<div class="relative flex flex-col md:flex-row gap-8 md:gap-16">
+<div class="md:w-32 flex-none">
+<p class="font-label text-xs text-on-surface-variant mb-4">OCT 15, 2023</p>
+<span class="inline-block px-3 py-1 rounded-full bg-[#f4a460]/10 text-[#f4a460] font-label text-[10px] tracking-widest uppercase">Nostalgic</span>
+</div>
+<div class="flex-1">
+<h3 class="text-2xl font-headline font-semibold mb-3 group-hover:text-secondary-fixed-dim transition-colors">The Orchard of Glass Pears</h3>
+<p class="text-lg leading-relaxed text-on-surface/80 italic line-clamp-2">Walking through a childhood garden where the trees were made of wrought iron. The fruit chimed like bells in the wind, playing a melody I haven't heard in twenty years.</p>
+<div class="mt-6 flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="font-label text-[10px] uppercase tracking-widest text-secondary">Recall Fragment</span>
+<span class="material-symbols-outlined text-sm text-secondary">arrow_forward</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Dream Card 4 -->
+<article class="group relative frosted-glass rounded-lg p-8 md:p-10 transition-all duration-500 hover:bg-white/[0.06] overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-blue-400/5 blur-3xl rounded-full -mr-16 -mt-16 group-hover:bg-blue-400/10 transition-colors"></div>
+<div class="relative flex flex-col md:flex-row gap-8 md:gap-16">
+<div class="md:w-32 flex-none">
+<p class="font-label text-xs text-on-surface-variant mb-4">OCT 09, 2023</p>
+<span class="inline-block px-3 py-1 rounded-full bg-[#93c5fd]/10 text-[#93c5fd] font-label text-[10px] tracking-widest uppercase">Melancholic</span>
+</div>
+<div class="flex-1">
+<h3 class="text-2xl font-headline font-semibold mb-3 group-hover:text-blue-300 transition-colors">The Submerged Cathedral</h3>
+<p class="text-lg leading-relaxed text-on-surface/80 italic line-clamp-2">Swimming through high stone arches as light filtered through miles of dark water. A choir of whales was singing a requiem for a city I used to live in.</p>
+<div class="mt-6 flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="font-label text-[10px] uppercase tracking-widest text-blue-300">Recall Fragment</span>
+<span class="material-symbols-outlined text-sm text-blue-300">arrow_forward</span>
+</div>
+</div>
+</div>
+</article>
+</div>
+<!-- Load More Anchor -->
+<div class="mt-16 text-center">
+<button class="group inline-flex flex-col items-center gap-4">
+<div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:border-primary/50 transition-colors">
+<span class="material-symbols-outlined text-slate-500 group-hover:text-primary transition-colors">keyboard_arrow_down</span>
+</div>
+<span class="font-label text-[10px] uppercase tracking-[0.3em] text-on-surface-variant">Delve Deeper</span>
+</button>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 bg-[#0d0d19]/90 backdrop-blur-2xl flex justify-around items-center px-4 pb-6 pt-2">
+<!-- Archive (Active) -->
+<a class="flex flex-col items-center justify-center bg-[#c084fc]/10 text-[#c084fc] rounded-full px-4 py-1" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">auto_stories</span>
+<span class="font-mono text-[10px] tracking-widest uppercase mt-1">Archive</span>
+</a>
+<!-- Insights -->
+<a class="flex flex-col items-center justify-center text-slate-500 hover:text-[#c084fc] transition-colors" href="#">
+<span class="material-symbols-outlined">visibility</span>
+<span class="font-mono text-[10px] tracking-widest uppercase mt-1">Insights</span>
+</a>
+<!-- Observatory -->
+<a class="flex flex-col items-center justify-center text-slate-500 hover:text-[#c084fc] transition-colors" href="#">
+<span class="material-symbols-outlined">auto_awesome</span>
+<span class="font-mono text-[10px] tracking-widest uppercase mt-1">Observatory</span>
+</a>
+<!-- Profile -->
+<a class="flex flex-col items-center justify-center text-slate-500 hover:text-[#c084fc] transition-colors" href="#">
+<span class="material-symbols-outlined">person_search</span>
+<span class="font-mono text-[10px] tracking-widest uppercase mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

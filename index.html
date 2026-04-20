@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - DreamContinuator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="home">
+  <div id="stars"></div>
+  <div id="mood-glow"></div>
+
+  <div class="spinner-overlay" id="loading-spinner">
+    <div class="spinner"></div>
+    <div class="dream-text">Awakening...</div>
+  </div>
+
+  <nav>
+    <div class="logo">DreamContinuator</div>
+    <div class="user-menu">
+      <div class="avatar" id="user-avatar">?</div>
+      <span id="user-name">User</span>
+      <button id="sign-out-btn" style="padding: 6px 12px; font-size: 0.8rem;">Sign Out</button>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="hero">
+      <div class="moon"></div>
+      <h1>Every dream deserves an ending</h1>
+      <a href="log-dream.html" style="text-decoration: none;"><button id="log-dream-cta" class="primary mt-20" style="font-size: 1.2rem; padding: 15px 30px;">Log a Dream &rarr;</button></a>
+    </div>
+
+    <div style="margin-top: 60px;">
+      <div class="flex justify-between items-center">
+        <h2>Recent Dreams</h2>
+        <a href="archive.html" style="font-size: 0.9rem;">View All</a>
+      </div>
+      <div class="dreams-grid" id="recent-dreams-container">
+        <!-- Fetched from Firestore -->
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="script.js?v=8"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Archive - DreamContinuator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="archive">
+  <div id="stars"></div>
+  <div id="mood-glow"></div>
+  
+  <div class="spinner-overlay" id="loading-spinner">
+    <div class="spinner"></div>
+    <div class="dream-text">Accessing the Akashic Records...</div>
+  </div>
+
+  <nav>
+    <a href="index.html" class="logo" style="color: inherit;">DreamContinuator</a>
+    <div class="user-menu">
+      <div class="avatar" id="user-avatar">?</div>
+      <span id="user-name">User</span>
+    </div>
+  </nav>
+
+  <div class="container">
+    <a href="index.html" style="display: inline-block; margin-bottom: 20px;">&larr; Back Home</a>
+    
+    <h2 style="margin-top: 0;">Dream Archive</h2>
+    <div id="archive-empty" class="hidden text-center mt-40" style="color: var(--text-muted);">
+      <p>Your archive is empty.</p>
+      <a href="log-dream.html"><button class="mt-20 primary">Log your first dream</button></a>
+    </div>
+    <div class="dreams-grid" id="archive-dreams-container">
+      <!-- Fetched from Firestore -->
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal-overlay" id="dream-modal">
+    <div class="modal-content card glass-panel" style="padding: 30px;">
+      <button class="modal-close" id="modal-close">&times;</button>
+      <div class="mood-tag" id="modal-mood" style="margin-bottom: 10px;"></div>
+      <div style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 20px;" id="modal-date"></div>
+      <blockquote class="fragment-quote" id="modal-fragment"></blockquote>
+      <div class="continuation-text" id="modal-continuation"></div>
+      
+      <div class="translate-panel">
+        <h3>Translate 🌐</h3>
+        <div class="translate-controls">
+          <input type="text" id="modal-language-search" placeholder="Search language..." style="flex: 1;">
+          <select id="modal-language-select" style="flex: 2;"></select>
+          <button id="modal-translate-btn" class="primary">Translate &rarr;</button>
+        </div>
+        <div id="modal-translation-error" class="error-msg"></div>
+        <div id="modal-translation-result" class="translation-result">
+          <div class="flag-badge" id="modal-translation-badge"></div>
+          <div class="continuation-text" id="modal-translation-text"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="script.js?v=8"></script>
+</body>
+</html>

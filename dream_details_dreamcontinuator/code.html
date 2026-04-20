@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DreamContinuator | Archive</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&amp;family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary-fixed-dim": "#cf9fff",
+                      "surface-variant": "#23233b",
+                      "primary-container": "#bc80f8",
+                      "surface-container": "#181829",
+                      "secondary-fixed-dim": "#f9d04b",
+                      "tertiary-fixed-dim": "#8dddd3",
+                      "on-error-container": "#ff97a3",
+                      "on-error": "#490013",
+                      "surface-tint": "#c890ff",
+                      "surface-container-low": "#121221",
+                      "on-tertiary-fixed": "#00443e",
+                      "on-tertiary-container": "#005852",
+                      "inverse-on-surface": "#545463",
+                      "error": "#fd6f85",
+                      "outline-variant": "#46465f",
+                      "surface-container-highest": "#23233b",
+                      "tertiary-dim": "#8dddd3",
+                      "primary-dim": "#be83fa",
+                      "on-secondary-fixed": "#4e3d00",
+                      "surface-dim": "#0d0d19",
+                      "primary-fixed": "#d9b1ff",
+                      "surface-container-lowest": "#000000",
+                      "error-dim": "#c8475d",
+                      "primary": "#c890ff",
+                      "surface-container-high": "#1e1e32",
+                      "surface": "#0d0d19",
+                      "on-primary": "#400072",
+                      "secondary-fixed": "#ffe086",
+                      "tertiary": "#a9faef",
+                      "inverse-primary": "#7c41b5",
+                      "secondary": "#eac33e",
+                      "tertiary-container": "#9bebe1",
+                      "on-tertiary": "#00625a",
+                      "surface-bright": "#292944",
+                      "on-primary-container": "#2e0055",
+                      "outline": "#74738f",
+                      "on-secondary-container": "#c5a018",
+                      "on-secondary": "#4f3e00",
+                      "on-secondary-fixed-variant": "#705900",
+                      "on-primary-fixed-variant": "#602399",
+                      "background": "#0d0d19",
+                      "inverse-surface": "#fcf8ff",
+                      "secondary-container": "#302400",
+                      "on-background": "#e5e3ff",
+                      "secondary-dim": "#dbb530",
+                      "on-surface": "#e5e3ff",
+                      "on-surface-variant": "#aaa8c6",
+                      "error-container": "#8a1632",
+                      "tertiary-fixed": "#9bebe1",
+                      "on-primary-fixed": "#3d006d",
+                      "on-tertiary-fixed-variant": "#00635c"
+              },
+              "borderRadius": {
+                      "DEFAULT": "1rem",
+                      "lg": "2rem",
+                      "xl": "3rem",
+                      "full": "9999px"
+              },
+              "fontFamily": {
+                      "headline": ["Newsreader", "serif"],
+                      "body": ["Newsreader", "serif"],
+                      "label": ["Space Grotesk", "monospace"]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .serif-italic { font-style: italic; }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+        }
+        .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(200, 144, 255, 0.2); border-radius: 10px; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary/30 selection:text-primary-fixed">
+<!-- Top Navigation Anchor -->
+<header class="bg-[#0d0d19]/80 backdrop-blur-xl flex justify-between items-center w-full px-6 py-4 fixed top-0 z-[100] shadow-[0_0_50px_rgba(200,144,255,0.08)]">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#c084fc]" data-icon="nights_stay">nights_stay</span>
+<span class="text-2xl font-serif italic text-[#c084fc]">DreamContinuator</span>
+</div>
+<div class="hidden md:flex gap-8 items-center">
+<span class="text-[#c084fc] font-bold font-mono text-xs cursor-pointer">Archive</span>
+<span class="text-slate-400 font-mono text-xs hover:bg-white/5 transition-all duration-300 px-3 py-1 rounded cursor-pointer">Insights</span>
+<span class="text-slate-400 font-mono text-xs hover:bg-white/5 transition-all duration-300 px-3 py-1 rounded cursor-pointer">Observatory</span>
+<button class="material-symbols-outlined text-slate-400 hover:text-[#c084fc] transition-all duration-300" data-icon="logout">logout</button>
+</div>
+</header>
+<!-- Main Content Canvas (Blurred background content) -->
+<main class="pt-24 pb-32 px-6 max-w-7xl mx-auto blur-md">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<div class="md:col-span-8 space-y-8">
+<div class="h-64 bg-surface-container rounded-xl"></div>
+<div class="h-96 bg-surface-container rounded-xl"></div>
+</div>
+<div class="md:col-span-4 space-y-8">
+<div class="h-48 bg-surface-container-high rounded-xl"></div>
+<div class="h-48 bg-surface-container-high rounded-xl"></div>
+</div>
+</div>
+</main>
+<!-- Full-screen Blurred Overlay -->
+<div class="fixed inset-0 z-[200] flex items-center justify-center bg-background/60 backdrop-blur-md p-4 md:p-6">
+<!-- Modal Container (680px Max Width) -->
+<section class="glass-panel w-full max-w-[680px] h-[870px] md:h-auto md:max-h-[921px] rounded-xl flex flex-col relative overflow-hidden shadow-[0_0_100px_rgba(200,144,255,0.12)] outline-none border border-white/5">
+<!-- Close Button -->
+<button class="absolute top-6 right-6 z-[210] p-2 rounded-full hover:bg-white/10 text-on-surface-variant transition-colors">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+<!-- Modal Content Scrollable Area -->
+<div class="flex-1 overflow-y-auto custom-scrollbar px-8 md:px-12 pt-12 pb-8">
+<!-- Mood Badge & Meta -->
+<div class="flex items-center gap-4 mb-8">
+<div class="bg-[#c084fc]/10 text-[#c084fc] px-4 py-1.5 rounded-full border border-[#c084fc]/20">
+<span class="font-label text-[10px] uppercase tracking-widest">Surreal</span>
+</div>
+<span class="font-label text-[10px] text-on-surface-variant uppercase tracking-widest">October 24, 1923</span>
+</div>
+<!-- Headline -->
+<h2 class="text-4xl md:text-5xl font-headline font-light text-on-surface mb-10 leading-tight">
+                    The Library of <span class="serif-italic">Unwritten Records</span>
+</h2>
+<!-- Original Fragment Blockquote -->
+<div class="relative mb-12 pl-8 py-2">
+<div class="absolute left-0 top-0 bottom-0 w-px bg-primary/30"></div>
+<p class="font-body text-xl md:text-2xl text-on-surface-variant serif-italic leading-relaxed">
+                        "I was walking through a hall where books were not bound by ink, but by the breath of those who never spoke. I found a volume with my name on it..."
+                    </p>
+<span class="font-label text-[10px] text-primary/60 uppercase tracking-[0.2em] mt-4 block">Original Fragment</span>
+</div>
+<!-- Full AI Continuation Text -->
+<article class="space-y-6 text-lg md:text-xl text-on-surface/90 leading-relaxed font-body">
+<p>
+                        The pages began to hum as I touched the spine. They weren't made of paper, but of a silken, translucent membrane that pulsed with a faint violet light. As I opened the record, the hall dissolved into a vast, open courtyard where the stars hung low enough to touch. 
+                    </p>
+<p>
+                        Every word I had ever intended to say—the apologies left unuttered, the declarations of love swallowed by fear, the quiet observations of morning light—was crystallized here. They floated in the air like glowing embers, swirling into sentences that I didn't recognize but understood perfectly.
+                    </p>
+<p>
+                        A figure appeared at the far end of the courtyard, draped in a cloak of shifting constellations. They held a quill made of frozen lightning. "You are early," they whispered, their voice echoing not in the air, but in the marrow of my bones. "We haven't finished the chapter on your silences yet."
+                    </p>
+<p>
+                        I looked down at the book. The pages were now filling themselves, a frantic scrawling of ink that looked like bird tracks in the snow. It was recording the dream as I lived it, weaving the present into the past until the distinction between what was happening and what had been recorded vanished entirely.
+                    </p>
+</article>
+<!-- Decorative Spacer -->
+<div class="flex justify-center py-12">
+<div class="w-12 h-px bg-gradient-to-r from-transparent via-outline-variant to-transparent"></div>
+</div>
+</div>
+<!-- Translation Panel Footer -->
+<footer class="bg-surface-container-high/50 px-8 py-6 border-t border-white/5 flex flex-wrap items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary/80" data-icon="public">public</span>
+<span class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Translate Dream</span>
+</div>
+<div class="flex items-center gap-4 w-full md:w-auto">
+<!-- Dropdown Trigger -->
+<div class="flex items-center bg-surface-container-lowest px-4 py-2 rounded-full border border-outline-variant/20 cursor-pointer hover:border-primary/40 transition-colors group">
+<span class="font-label text-[11px] text-on-surface uppercase tracking-wider mr-6">English (US)</span>
+<span class="material-symbols-outlined text-xs text-on-surface-variant group-hover:text-primary transition-colors" data-icon="expand_more">expand_more</span>
+</div>
+<!-- Search Icon Button -->
+<button class="p-2 rounded-full bg-surface-container-lowest border border-outline-variant/20 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-xl" data-icon="search">search</span>
+</button>
+</div>
+</footer>
+</section>
+</div>
+<!-- Bottom Navigation Shell -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-2 bg-[#0d0d19]/90 backdrop-blur-2xl md:hidden">
+<div class="flex flex-col items-center justify-center bg-[#c084fc]/10 text-[#c084fc] rounded-full px-4 py-1">
+<span class="material-symbols-outlined" data-icon="auto_stories">auto_stories</span>
+<span class="font-mono text-[10px] tracking-widest uppercase mt-1">Archive</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 hover:text-[#c084fc]">
+<span class="material-symbols-outlined" data-icon="visibility">visibility</span>
+<span class="font-mono text-[10px] tracking-widest uppercase mt-1">Insights</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 hover:text-[#c084fc]">
+<span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span>
+<span class="font-mono text-[10px] tracking-widest uppercase mt-1">Observatory</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 hover:text-[#c084fc]">
+<span class="material-symbols-outlined" data-icon="person_search">person_search</span>
+<span class="font-mono text-[10px] tracking-widest uppercase mt-1">Profile</span>
+</div>
+</nav>
+<!-- Background Decorative Elements -->
+<div class="fixed top-[-10%] left-[-5%] w-[40%] h-[40%] bg-primary/5 rounded-full blur-[120px] pointer-events-none -z-10"></div>
+<div class="fixed bottom-[-10%] right-[-5%] w-[50%] h-[50%] bg-secondary/5 rounded-full blur-[150px] pointer-events-none -z-10"></div>
+</body></html>

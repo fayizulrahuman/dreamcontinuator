@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log Dream - DreamContinuator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="log-dream">
+  <div id="stars"></div>
+  <div id="mood-glow"></div>
+  
+  <div class="spinner-overlay hidden" id="loading-spinner">
+    <div class="spinner"></div>
+    <div class="dream-text">Weaving the ending...</div>
+  </div>
+
+  <nav>
+    <a href="index.html" class="logo" style="color: inherit;">DreamContinuator</a>
+    <div class="user-menu">
+      <div class="avatar" id="user-avatar">?</div>
+      <span id="user-name">User</span>
+    </div>
+  </nav>
+
+  <div class="container">
+    <a href="index.html" style="display: inline-block; margin-bottom: 20px;">&larr; Back to Reality</a>
+    
+    <div class="card glass-panel">
+      <h2 style="margin-top: 0;">Log a Dream</h2>
+      
+      <div class="form-group">
+        <label>The Mood</label>
+        <div class="mood-selector" id="mood-selector">
+          <div class="mood-pill active" data-mood="Surreal">Surreal</div>
+          <div class="mood-pill" data-mood="Nightmarish">Nightmarish</div>
+          <div class="mood-pill" data-mood="Melancholy">Melancholy</div>
+          <div class="mood-pill" data-mood="Euphoric">Euphoric</div>
+          <div class="mood-pill" data-mood="Liminal">Liminal</div>
+          <div class="mood-pill" data-mood="Nostalgic">Nostalgic</div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>The Fragment</label>
+        <textarea id="dream-fragment" placeholder="I was walking through a house I've never seen before, but I knew it was mine..."></textarea>
+      </div>
+
+      <div id="error-message" class="error-msg mb-20"></div>
+
+      <button id="continue-dream-btn" class="primary w-full" style="font-size: 1.1rem; padding: 15px;">Continue the dream &rarr;</button>
+    </div>
+  </div>
+
+  <script type="module" src="script.js?v=8"></script>
+</body>
+</html>

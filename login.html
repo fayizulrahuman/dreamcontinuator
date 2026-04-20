@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - DreamContinuator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="login">
+  <div id="stars"></div>
+  <div id="mood-glow"></div>
+  
+  <div class="spinner-overlay hidden" id="loading-spinner">
+    <div class="spinner"></div>
+    <div class="dream-text">Summoning spirits...</div>
+  </div>
+
+  <div class="container" style="display: flex; justify-content: center; align-items: center; min-height: 80vh;">
+    <div class="card glass-panel" style="width: 100%; max-width: 450px;">
+      <h1 class="text-center" style="margin-top: 0;">DreamContinuator</h1>
+      <p class="text-center" style="color: var(--text-muted); margin-bottom: 30px;">Every dream deserves an ending.</p>
+      
+      <div id="error-message" class="error-msg text-center mb-20"></div>
+
+      <button id="google-login-btn" class="w-full mb-20" style="background: rgba(255,255,255,0.1);">
+        <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google" style="width: 20px; height: 20px;">
+        Sign in with Google
+      </button>
+
+      <div style="text-align: center; margin-bottom: 20px; color: var(--text-muted);">or</div>
+
+      <form id="auth-form">
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" id="email" required>
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" id="password" required>
+        </div>
+        <div class="form-group hidden" id="confirm-password-group">
+          <label>Confirm Password</label>
+          <input type="password" id="confirm-password">
+        </div>
+        
+        <button type="submit" id="submit-btn" class="primary w-full mt-20">Sign In</button>
+      </form>
+
+      <div class="mt-20 text-center" style="font-size: 0.9rem;">
+        <a href="#" id="forgot-password-link" style="display: block; margin-bottom: 10px;">Forgot Password?</a>
+        <span id="toggle-mode-text">Don't have an account? <a href="#" id="toggle-mode-link">Sign Up</a></span>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="script.js?v=8"></script>
+</body>
+</html>

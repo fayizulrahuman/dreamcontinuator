@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&amp;family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "primary-fixed-dim": "#cf9fff",
+                "surface-variant": "#23233b",
+                "primary-container": "#bc80f8",
+                "surface-container": "#181829",
+                "secondary-fixed-dim": "#f9d04b",
+                "tertiary-fixed-dim": "#8dddd3",
+                "on-error-container": "#ff97a3",
+                "on-error": "#490013",
+                "surface-tint": "#c890ff",
+                "surface-container-low": "#121221",
+                "on-tertiary-fixed": "#00443e",
+                "on-tertiary-container": "#005852",
+                "inverse-on-surface": "#545463",
+                "error": "#fd6f85",
+                "outline-variant": "#46465f",
+                "surface-container-highest": "#23233b",
+                "tertiary-dim": "#8dddd3",
+                "primary-dim": "#be83fa",
+                "on-secondary-fixed": "#4e3d00",
+                "surface-dim": "#0d0d19",
+                "primary-fixed": "#d9b1ff",
+                "surface-container-lowest": "#000000",
+                "error-dim": "#c8475d",
+                "primary": "#c890ff",
+                "surface-container-high": "#1e1e32",
+                "surface": "#0d0d19",
+                "on-primary": "#400072",
+                "secondary-fixed": "#ffe086",
+                "tertiary": "#a9faef",
+                "inverse-primary": "#7c41b5",
+                "secondary": "#eac33e",
+                "tertiary-container": "#9bebe1",
+                "on-tertiary": "#00625a",
+                "surface-bright": "#292944",
+                "on-primary-container": "#2e0055",
+                "outline": "#74738f",
+                "on-secondary-container": "#c5a018",
+                "on-secondary": "#4f3e00",
+                "on-secondary-fixed-variant": "#705900",
+                "on-primary-fixed-variant": "#602399",
+                "background": "#0d0d19",
+                "inverse-surface": "#fcf8ff",
+                "secondary-container": "#302400",
+                "on-background": "#e5e3ff",
+                "secondary-dim": "#dbb530",
+                "on-surface": "#e5e3ff",
+                "on-surface-variant": "#aaa8c6",
+                "error-container": "#8a1632",
+                "tertiary-fixed": "#9bebe1",
+                "on-primary-fixed": "#3d006d",
+                "on-tertiary-fixed-variant": "#00635c"
+            },
+            "borderRadius": {
+                "DEFAULT": "1rem",
+                "lg": "2rem",
+                "xl": "3rem",
+                "full": "9999px"
+            },
+            "fontFamily": {
+                "headline": ["Newsreader", "serif"],
+                "body": ["Newsreader", "serif"],
+                "label": ["Courier Prime", "monospace"],
+                "ui": ["Space Grotesk", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #0d0d19;
+            color: #e5e3ff;
+            font-family: 'Newsreader', serif;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        .dream-glow {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80vw;
+            height: 80vh;
+            background: radial-gradient(circle at center, rgba(200, 144, 255, 0.05) 0%, rgba(13, 13, 25, 0) 70%);
+            z-index: -1;
+            pointer-events: none;
+        }
+        .mood-blob-1 {
+            position: absolute;
+            top: 10%;
+            right: 5%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(192, 132, 252, 0.08) 0%, rgba(13, 13, 25, 0) 70%);
+            filter: blur(80px);
+            z-index: -1;
+        }
+        .mood-blob-2 {
+            position: absolute;
+            bottom: -5%;
+            left: -5%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(147, 197, 253, 0.06) 0%, rgba(13, 13, 25, 0) 70%);
+            filter: blur(100px);
+            z-index: -1;
+        }
+        textarea::placeholder {
+            color: rgba(170, 168, 198, 0.4);
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="selection:bg-primary/30">
+<!-- Background Elements -->
+<div class="dream-glow"></div>
+<div class="mood-blob-1"></div>
+<div class="mood-blob-2"></div>
+<!-- TopAppBar -->
+<header class="bg-[#0d0d19]/80 backdrop-blur-xl flex justify-between items-center w-full px-6 py-4 fixed top-0 z-[60] shadow-[0_0_50px_rgba(200,144,255,0.08)]">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#c084fc]" style="font-variation-settings: 'FILL' 1;">nights_stay</span>
+<h1 class="text-2xl font-serif italic text-[#c084fc]">DreamContinuator</h1>
+</div>
+<div class="flex items-center gap-6">
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-slate-400 font-mono text-xs hover:bg-white/5 transition-all duration-300 px-3 py-1 rounded-full" href="#">Archive</a>
+<a class="text-slate-400 font-mono text-xs hover:bg-white/5 transition-all duration-300 px-3 py-1 rounded-full" href="#">Insights</a>
+<a class="text-[#c084fc] font-bold font-mono text-xs px-3 py-1 bg-[#c084fc]/10 rounded-full" href="#">Log Dream</a>
+</nav>
+<button class="material-symbols-outlined text-slate-400 hover:text-[#c084fc] transition-colors" data-icon="logout">logout</button>
+</div>
+</header>
+<main class="pt-32 pb-24 px-6 max-w-5xl mx-auto min-h-screen flex flex-col">
+<!-- Header Section -->
+<section class="mb-12">
+<span class="font-mono text-[10px] tracking-[0.2em] uppercase text-tertiary-fixed-dim mb-4 block">Session ID: 882-Alpha</span>
+<h2 class="text-5xl md:text-7xl font-headline font-light leading-tight tracking-tight text-on-surface">
+                Transcribe the <span class="italic font-normal text-primary">Subconscious</span>
+</h2>
+</section>
+<!-- Mood Selector -->
+<section class="mb-10 overflow-x-auto no-scrollbar">
+<div class="flex gap-3 pb-2 min-w-max">
+<button class="px-5 py-2 rounded-full border border-primary/20 bg-primary/10 text-primary font-mono text-[11px] uppercase tracking-wider transition-all hover:bg-primary/20">
+                    surreal
+                </button>
+<button class="px-5 py-2 rounded-full border border-secondary-dim/20 bg-surface-container-low text-secondary-dim font-mono text-[11px] uppercase tracking-wider transition-all hover:bg-secondary-dim/10">
+                    warm
+                </button>
+<button class="px-5 py-2 rounded-full border border-tertiary-fixed-dim/20 bg-surface-container-low text-tertiary-fixed-dim font-mono text-[11px] uppercase tracking-wider transition-all hover:bg-tertiary-fixed-dim/10">
+                    eerie
+                </button>
+<button class="px-5 py-2 rounded-full border border-slate-600/20 bg-surface-container-low text-slate-400 font-mono text-[11px] uppercase tracking-wider transition-all hover:bg-slate-600/10">
+                    dark
+                </button>
+<button class="px-5 py-2 rounded-full border border-blue-400/20 bg-surface-container-low text-blue-300 font-mono text-[11px] uppercase tracking-wider transition-all hover:bg-blue-400/10">
+                    melancholic
+                </button>
+<button class="px-5 py-2 rounded-full border border-yellow-300/20 bg-surface-container-low text-yellow-200 font-mono text-[11px] uppercase tracking-wider transition-all hover:bg-yellow-300/10">
+                    wondrous
+                </button>
+<button class="px-5 py-2 rounded-full border border-primary-fixed-dim/20 bg-surface-container-low text-primary-fixed-dim font-mono text-[11px] uppercase tracking-wider transition-all hover:bg-primary-fixed-dim/10">
+                    euphoric
+                </button>
+</div>
+</section>
+<!-- Textarea Section -->
+<section class="flex-grow flex flex-col gap-6">
+<div class="relative group flex-grow flex flex-col">
+<div class="absolute -inset-1 bg-gradient-to-r from-primary/20 to-tertiary/10 rounded-xl blur-xl opacity-20 group-focus-within:opacity-40 transition-opacity duration-1000"></div>
+<textarea class="relative w-full flex-grow bg-surface-container-low/40 border-none rounded-xl p-8 md:p-12 font-label text-lg md:text-xl leading-relaxed text-on-surface focus:ring-1 focus:ring-primary/30 transition-all placeholder:italic resize-none glass-panel" placeholder="I was walking through a forest where the leaves were made of obsidian glass..."></textarea>
+<div class="absolute bottom-6 right-8 flex items-center gap-3">
+<span class="italic text-slate-500 font-serif text-sm opacity-60">Entering the dreamscape...</span>
+</div>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center gap-8 mt-4">
+<div class="flex gap-4 items-center">
+<div class="flex -space-x-3">
+<div class="w-8 h-8 rounded-full border border-surface-dim bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="close-up portrait of a woman with mystical lighting and soft shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA27qEerx9QhCEUvGDFxhiOvoDpivhcgXBPl2OQo3ruMoxBQnpBI4WMmnfkV-HbRPGew--rSGqbTY3PAIvvl0JVzyCb91ql862EKzNu04iJn52q8Dwlq9agx6IBweKLVaBRpYU75x-S3f4_HBzlQNIXumbLPFWK7eUvftvLaXEvOrTqjX26SC3gtAmViKrgcD3q3WUT1pa6OJovFy2F2ByPv8XrTkvEc4Fkn_AF1QZs65wV-w_v1n4gXAUQmgRAESWpxJa2TUyO1WU"/>
+</div>
+<div class="w-8 h-8 rounded-full border border-surface-dim bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="close-up portrait of a man in deep thought with cinematic low light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBn1F89OG4KkHGK1Kzbuc6s5wvpQWt6I6iJUDkDy58ETYN6NrdQtiBwAEO_S1a7RYYvtaGI_ZxZtf0YZyUFoInI_RMWiHauFdxzEZTt-9L44yEIXzgP4UUiM6in2Nm7orrx8Ug6NoOeEY5Oe6yUv6wcanh_0lCBmd_dtjcPSGALlKSXGbhtlWpITUTPVXPISiJ38k8iX5eBBJEv5P_cEJNAFq3xqWVmdl--w-IcWHMn3pD0FwlYXV6kk4tZXyYomkRkm1UkrK2d-Fg"/>
+</div>
+</div>
+<p class="font-mono text-[10px] uppercase tracking-widest text-on-surface-variant">12 others are dreaming now</p>
+</div>
+<button class="group relative px-10 py-5 bg-gradient-to-r from-[#c890ff] to-[#be83fa] rounded-full text-[#2e0055] font-mono font-bold text-sm tracking-widest uppercase flex items-center gap-3 transition-all hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(200,144,255,0.3)] active:scale-95 duration-200">
+                    Continue the dream
+                    <span class="material-symbols-outlined transition-transform group-hover:translate-x-1" data-icon="arrow_right_alt">arrow_right_alt</span>
+</button>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-2 bg-[#0d0d19]/90 backdrop-blur-2xl">
+<a class="flex flex-col items-center justify-center text-slate-500 hover:text-[#c084fc] transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="auto_stories">auto_stories</span>
+<span class="font-mono text-[10px] tracking-widest uppercase mt-1">Archive</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 hover:text-[#c084fc] transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="visibility">visibility</span>
+<span class="font-mono text-[10px] tracking-widest uppercase mt-1">Insights</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#c084fc]/10 text-[#c084fc] rounded-full px-4 py-1 active:scale-90 opacity-80" href="#">
+<span class="material-symbols-outlined" data-icon="auto_awesome" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="font-mono text-[10px] tracking-widest uppercase mt-1">Log</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 hover:text-[#c084fc] transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="person_search">person_search</span>
+<span class="font-mono text-[10px] tracking-widest uppercase mt-1">Profile</span>
+</a>
+</nav>
+<!-- Aesthetic Journal Decorations -->
+<div class="fixed left-6 top-1/2 -translate-y-1/2 hidden xl:block opacity-20 pointer-events-none">
+<div class="h-64 w-[1px] bg-gradient-to-b from-transparent via-slate-400 to-transparent"></div>
+<p class="[writing-mode:vertical-rl] mt-4 font-mono text-[10px] tracking-[0.4em] uppercase text-slate-400">Chronicle of Night</p>
+</div>
+</body></html>

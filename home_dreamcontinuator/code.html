@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DreamContinuator | Your Celestial Archive</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&amp;family=Courier+Prime:ital,wght@0,400;0,700;1,400&amp;family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Space+Grotesk:wght@300..700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed-dim": "#cf9fff",
+                    "surface-variant": "#23233b",
+                    "primary-container": "#bc80f8",
+                    "surface-container": "#181829",
+                    "secondary-fixed-dim": "#f9d04b",
+                    "tertiary-fixed-dim": "#8dddd3",
+                    "on-error-container": "#ff97a3",
+                    "on-error": "#490013",
+                    "surface-tint": "#c890ff",
+                    "surface-container-low": "#121221",
+                    "on-tertiary-fixed": "#00443e",
+                    "on-tertiary-container": "#005852",
+                    "inverse-on-surface": "#545463",
+                    "error": "#fd6f85",
+                    "outline-variant": "#46465f",
+                    "surface-container-highest": "#23233b",
+                    "tertiary-dim": "#8dddd3",
+                    "primary-dim": "#be83fa",
+                    "on-secondary-fixed": "#4e3d00",
+                    "surface-dim": "#0d0d19",
+                    "primary-fixed": "#d9b1ff",
+                    "surface-container-lowest": "#000000",
+                    "error-dim": "#c8475d",
+                    "primary": "#c890ff",
+                    "surface-container-high": "#1e1e32",
+                    "surface": "#0d0d19",
+                    "on-primary": "#400072",
+                    "secondary-fixed": "#ffe086",
+                    "tertiary": "#a9faef",
+                    "inverse-primary": "#7c41b5",
+                    "secondary": "#eac33e",
+                    "tertiary-container": "#9bebe1",
+                    "on-tertiary": "#00625a",
+                    "surface-bright": "#292944",
+                    "on-primary-container": "#2e0055",
+                    "outline": "#74738f",
+                    "on-secondary-container": "#c5a018",
+                    "on-secondary": "#4f3e00",
+                    "on-secondary-fixed-variant": "#705900",
+                    "on-primary-fixed-variant": "#602399",
+                    "background": "#0d0d19",
+                    "inverse-surface": "#fcf8ff",
+                    "secondary-container": "#302400",
+                    "on-background": "#e5e3ff",
+                    "secondary-dim": "#dbb530",
+                    "on-surface": "#e5e3ff",
+                    "on-surface-variant": "#aaa8c6",
+                    "error-container": "#8a1632",
+                    "tertiary-fixed": "#9bebe1",
+                    "on-primary-fixed": "#3d006d",
+                    "on-tertiary-fixed-variant": "#00635c"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Cormorant Garamond", "Newsreader", "serif"],
+                    "body": ["Cormorant Garamond", "Newsreader", "serif"],
+                    "label": ["Courier Prime", "Space Grotesk", "monospace"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #0d0d19;
+            color: #e5e3ff;
+            overflow-x: hidden;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .star-field {
+            background-image: radial-gradient(circle at 1px 1px, rgba(200, 144, 255, 0.15) 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+        .celestial-glow {
+            filter: blur(80px);
+            opacity: 0.15;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .asymmetric-layout {
+            display: grid;
+            grid-template-columns: 1fr 1.618fr;
+        }
+        @media (max-width: 768px) {
+            .asymmetric-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body class="font-body selection:bg-primary/30">
+<!-- Atmospheric Background Elements -->
+<div class="fixed inset-0 z-[-1] pointer-events-none star-field"></div>
+<div class="fixed top-[-10%] left-[-10%] w-[50%] h-[50%] bg-primary celestial-glow rounded-full"></div>
+<div class="fixed bottom-[-10%] right-[-10%] w-[60%] h-[60%] bg-tertiary celestial-glow rounded-full"></div>
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 bg-[#0d0d19]/80 backdrop-blur-xl shadow-[0_0_50px_rgba(200,144,255,0.08)] flex justify-between items-center px-6 py-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#c084fc] text-3xl" data-icon="nights_stay">nights_stay</span>
+<h1 class="text-2xl font-serif italic text-[#c084fc]">DreamContinuator</h1>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden md:flex items-center gap-4">
+<span class="font-label text-xs tracking-widest text-slate-400 uppercase">Julian D.</span>
+<button class="font-label text-xs tracking-widest text-slate-500 uppercase hover:text-[#c084fc] transition-colors flex items-center gap-2">
+                    logout
+                    <span class="material-symbols-outlined text-sm" data-icon="logout">logout</span>
+</button>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container-high overflow-hidden border border-outline-variant/30 ring-2 ring-primary/20">
+<img alt="JD Profile" class="w-full h-full object-cover" data-alt="close up portrait of a professional man with short dark hair and thoughtful expression in soft low light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzGEIk1GbbzWRG4-xsDUZ-C5V90sQWYp6aeiSIUCqhTl8ZoAkb_3MbV-fKWOG3-6p0KZ82NOUfom3Cx6WnjTN-6McDRyIRiiVn7Ky0EcTErtwRyvQk2WCHHpW3Ac_VfrromMrpBPOgK00Xc7RLiOsiT41Rz5Ef7cpYlf1pyFNx-9SKR12miQKA25H9Z-jlez7MO7w4ulA8R1zwFVcN4GDBk4pa-Upqfqm0zz1DHZrcOXEgmwdaldJ5_bICARom4aI5wO2hmLmCfMI"/>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="relative pt-32 pb-40 px-6 max-w-7xl mx-auto space-y-32">
+<!-- Hero Section -->
+<section class="asymmetric-layout items-center gap-16 min-h-[614px]">
+<div class="order-2 md:order-1 flex flex-col items-start gap-8">
+<div class="space-y-4">
+<p class="font-label text-sm tracking-[0.2em] text-secondary uppercase">Entry Log: 03.14</p>
+<h2 class="text-6xl md:text-8xl font-headline font-light tracking-tight leading-[1.1]">
+                        Welcome to your <br/>
+<span class="italic font-normal text-primary">dreamscape</span>
+</h2>
+</div>
+<p class="text-xl text-on-surface-variant/80 max-w-md leading-relaxed">
+                    Capture the ephemeral before it dissolves into the waking void. Your subconscious awaits transcription.
+                </p>
+<div class="pt-4">
+<button class="bg-gradient-to-r from-primary to-primary-dim text-on-primary-container px-10 py-5 rounded-full font-label text-sm tracking-[0.15em] uppercase hover:scale-105 transition-all duration-500 shadow-[0_0_40px_rgba(200,144,255,0.25)] flex items-center gap-3">
+<span class="material-symbols-outlined" data-icon="edit">edit</span>
+                        Log a Dream
+                    </button>
+</div>
+</div>
+<div class="order-1 md:order-2 relative flex justify-center items-center">
+<!-- Floating Moon Container -->
+<div class="relative w-72 h-72 md:w-96 md:h-96">
+<div class="absolute inset-0 bg-primary/20 rounded-full blur-[60px] animate-pulse"></div>
+<div class="relative w-full h-full rounded-full overflow-hidden shadow-inner bg-surface-dim">
+<img alt="Floating Moon" class="w-full h-full object-cover opacity-80 mix-blend-screen" data-alt="a detailed close up of a glowing realistic moon in a pitch black sky with soft purple ambient light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVVYGJcixkt5-E0ACNFLTDRjxu6dbGjvMihl0UsHW3g0KGwc5vAh1sFuNI_y_EF_QVqqxSskyif9B1rdGefiB5mdaC8Qo53i0KBhiTyU0dR8-d0geOTyC6MpGkmjv-T0mtamU3QEsFxZmVyeNkmoJMSJCYZ4JavoL8RG_pXUdpqj9Dmkx6ixEdkSR0irsKz3DOUDnNAonI202tXaN-sV7xkLnoB69Ei4q4Ad-HJH3E0ZXmC5nJXJ2wgTQ-AqW_heFTeFLbWpgASwY"/>
+</div>
+<!-- Orbiting Element -->
+<div class="absolute -top-4 -right-4 w-24 h-24 glass-panel rounded-full flex items-center justify-center p-2">
+<span class="material-symbols-outlined text-secondary text-4xl animate-bounce" data-icon="auto_awesome">auto_awesome</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Recent Dreams Section -->
+<section class="space-y-12">
+<div class="flex justify-between items-end border-b border-outline-variant/10 pb-6">
+<div class="space-y-2">
+<span class="font-label text-[10px] tracking-[0.3em] text-slate-500 uppercase">Recent Inscriptions</span>
+<h3 class="text-4xl font-headline italic">Archive Fragments</h3>
+</div>
+<a class="font-label text-xs tracking-widest text-[#c084fc] uppercase hover:underline" href="#">view all entries</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Dream Card 1 -->
+<div class="group surface-container-low rounded-lg p-8 space-y-6 hover:bg-surface-container-high transition-all duration-500 glass-panel">
+<div class="flex justify-between items-start">
+<p class="font-label text-[10px] tracking-widest text-slate-500 uppercase">Mar 12, 2024</p>
+<span class="material-symbols-outlined text-primary opacity-40" data-icon="bookmark">bookmark</span>
+</div>
+<div class="space-y-4">
+<h4 class="text-2xl font-headline font-semibold group-hover:text-primary transition-colors">The Emerald Library</h4>
+<p class="text-on-surface-variant/70 leading-relaxed font-light italic">
+                            Infinite shelves of glass books. The floor was water but I didn't sink. I heard someone whispering my name from the ceiling...
+                        </p>
+</div>
+<div class="flex flex-wrap gap-2 pt-4">
+<span class="px-3 py-1 rounded-full bg-tertiary/10 text-tertiary font-label text-[10px] tracking-tighter uppercase">Surreal</span>
+<span class="px-3 py-1 rounded-full bg-primary/10 text-primary font-label text-[10px] tracking-tighter uppercase">Lucid</span>
+</div>
+</div>
+<!-- Dream Card 2 -->
+<div class="group surface-container-low rounded-lg p-8 space-y-6 hover:bg-surface-container-high transition-all duration-500 glass-panel border-l-4 border-secondary/20">
+<div class="flex justify-between items-start">
+<p class="font-label text-[10px] tracking-widest text-slate-500 uppercase">Mar 10, 2024</p>
+<span class="material-symbols-outlined text-secondary opacity-40" data-icon="bookmark">bookmark</span>
+</div>
+<div class="space-y-4">
+<h4 class="text-2xl font-headline font-semibold group-hover:text-secondary transition-colors">The Clockwork Shore</h4>
+<p class="text-on-surface-variant/70 leading-relaxed font-light italic">
+                            Metal waves crashing against a beach of copper sand. The sky was a giant mechanism of gears and pendulums.
+                        </p>
+</div>
+<div class="flex flex-wrap gap-2 pt-4">
+<span class="px-3 py-1 rounded-full bg-secondary/10 text-secondary font-label text-[10px] tracking-tighter uppercase">Nostalgic</span>
+<span class="px-3 py-1 rounded-full bg-blue-400/10 text-blue-400 font-label text-[10px] tracking-tighter uppercase">Melancholic</span>
+</div>
+</div>
+<!-- Dream Card 3 (Asymmetric size hint) -->
+<div class="group surface-container-low rounded-lg p-8 space-y-6 hover:bg-surface-container-high transition-all duration-500 glass-panel">
+<div class="flex justify-between items-start">
+<p class="font-label text-[10px] tracking-widest text-slate-500 uppercase">Mar 08, 2024</p>
+<span class="material-symbols-outlined text-tertiary opacity-40" data-icon="bookmark">bookmark</span>
+</div>
+<div class="space-y-4">
+<h4 class="text-2xl font-headline font-semibold group-hover:text-tertiary transition-colors">Shadow Flight</h4>
+<p class="text-on-surface-variant/70 leading-relaxed font-light italic">
+                            Running through a forest of white trees, suddenly gravity flipped and I was falling upwards into a purple nebula.
+                        </p>
+</div>
+<div class="flex flex-wrap gap-2 pt-4">
+<span class="px-3 py-1 rounded-full bg-tertiary/10 text-tertiary font-label text-[10px] tracking-tighter uppercase">Euphoric</span>
+<span class="px-3 py-1 rounded-full bg-white/10 text-slate-400 font-label text-[10px] tracking-tighter uppercase">Vivid</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 bg-[#0d0d19]/90 backdrop-blur-2xl flex justify-around items-center px-4 pb-6 pt-2">
+<a class="flex flex-col items-center justify-center bg-[#c084fc]/10 text-[#c084fc] rounded-full px-4 py-1" href="#">
+<span class="material-symbols-outlined" data-icon="auto_stories">auto_stories</span>
+<span class="font-label text-[10px] tracking-widest uppercase mt-1">Archive</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 hover:text-[#c084fc]" href="#">
+<span class="material-symbols-outlined" data-icon="visibility">visibility</span>
+<span class="font-label text-[10px] tracking-widest uppercase mt-1">Insights</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 hover:text-[#c084fc]" href="#">
+<span class="material-symbols-outlined" data-icon="auto_awesome" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="font-label text-[10px] tracking-widest uppercase mt-1">Observatory</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 hover:text-[#c084fc]" href="#">
+<span class="material-symbols-outlined" data-icon="person_search">person_search</span>
+<span class="font-label text-[10px] tracking-widest uppercase mt-1">Profile</span>
+</a>
+</nav>
+<!-- Desktop Sidebar/Indicator -->
+<div class="hidden md:flex fixed right-8 top-1/2 -translate-y-1/2 flex-col gap-8 z-40">
+<div class="flex flex-col items-center gap-2 group cursor-pointer">
+<div class="w-1 h-12 bg-primary rounded-full group-hover:h-16 transition-all"></div>
+<span class="font-label text-[10px] vertical-text tracking-widest text-primary uppercase" style="writing-mode: vertical-rl;">LOGGED</span>
+</div>
+<div class="flex flex-col items-center gap-2 group cursor-pointer">
+<div class="w-1 h-8 bg-slate-700 rounded-full group-hover:h-12 group-hover:bg-slate-500 transition-all"></div>
+<span class="font-label text-[10px] vertical-text tracking-widest text-slate-600 uppercase" style="writing-mode: vertical-rl;">INSIGHTS</span>
+</div>
+<div class="flex flex-col items-center gap-2 group cursor-pointer">
+<div class="w-1 h-8 bg-slate-700 rounded-full group-hover:h-12 group-hover:bg-slate-500 transition-all"></div>
+<span class="font-label text-[10px] vertical-text tracking-widest text-slate-600 uppercase" style="writing-mode: vertical-rl;">VOID</span>
+</div>
+</div>
+<!-- Floating Action Button (FAB) - Local Mapping -->
+<button class="fixed bottom-10 right-8 md:bottom-12 md:right-12 z-40 bg-primary text-on-primary w-16 h-16 rounded-full flex items-center justify-center shadow-[0_10px_30px_rgba(200,144,255,0.4)] hover:scale-110 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-3xl" data-icon="add">add</span>
+</button>
+</body></html>

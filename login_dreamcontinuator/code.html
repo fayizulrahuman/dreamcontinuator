@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DreamContinuator - Login</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&amp;family=Courier+Prime:wght@400;700&amp;family=Space+Grotesk:wght@300;400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary-fixed-dim": "#cf9fff",
+                      "surface-variant": "#23233b",
+                      "primary-container": "#bc80f8",
+                      "surface-container": "#181829",
+                      "secondary-fixed-dim": "#f9d04b",
+                      "tertiary-fixed-dim": "#8dddd3",
+                      "on-error-container": "#ff97a3",
+                      "on-error": "#490013",
+                      "surface-tint": "#c890ff",
+                      "surface-container-low": "#121221",
+                      "on-tertiary-fixed": "#00443e",
+                      "on-tertiary-container": "#005852",
+                      "inverse-on-surface": "#545463",
+                      "error": "#fd6f85",
+                      "outline-variant": "#46465f",
+                      "surface-container-highest": "#23233b",
+                      "tertiary-dim": "#8dddd3",
+                      "primary-dim": "#be83fa",
+                      "on-secondary-fixed": "#4e3d00",
+                      "surface-dim": "#0d0d19",
+                      "primary-fixed": "#d9b1ff",
+                      "surface-container-lowest": "#000000",
+                      "error-dim": "#c8475d",
+                      "primary": "#c890ff",
+                      "surface-container-high": "#1e1e32",
+                      "surface": "#0d0d19",
+                      "on-primary": "#400072",
+                      "secondary-fixed": "#ffe086",
+                      "tertiary": "#a9faef",
+                      "inverse-primary": "#7c41b5",
+                      "secondary": "#eac33e",
+                      "tertiary-container": "#9bebe1",
+                      "on-tertiary": "#00625a",
+                      "surface-bright": "#292944",
+                      "on-primary-container": "#2e0055",
+                      "outline": "#74738f",
+                      "on-secondary-container": "#c5a018",
+                      "on-secondary": "#4f3e00",
+                      "on-secondary-fixed-variant": "#705900",
+                      "on-primary-fixed-variant": "#602399",
+                      "background": "#0d0d19",
+                      "inverse-surface": "#fcf8ff",
+                      "secondary-container": "#302400",
+                      "on-background": "#e5e3ff",
+                      "secondary-dim": "#dbb530",
+                      "on-surface": "#e5e3ff",
+                      "on-surface-variant": "#aaa8c6",
+                      "error-container": "#8a1632",
+                      "tertiary-fixed": "#9bebe1",
+                      "on-primary-fixed": "#3d006d",
+                      "on-tertiary-fixed-variant": "#00635c"
+              },
+              "borderRadius": {
+                      "DEFAULT": "1rem",
+                      "lg": "2rem",
+                      "xl": "3rem",
+                      "full": "9999px"
+              },
+              "fontFamily": {
+                      "headline": ["Newsreader", "serif"],
+                      "body": ["Newsreader", "serif"],
+                      "label": ["Courier Prime", "monospace"],
+                      "serif": ["Cormorant Garamond", "serif"]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .star-field {
+            background: radial-gradient(circle at 50% 50%, #1a1a2e 0%, #050510 100%);
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            overflow: hidden;
+        }
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            opacity: 0.3;
+        }
+        .glow-pulse {
+            box-shadow: 0 0 20px rgba(200, 144, 255, 0.2);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+        }
+        .floating-moon {
+            filter: drop-shadow(0 0 30px rgba(200, 144, 255, 0.3));
+        }
+    </style>
+</head>
+<body class="bg-[#050510] text-on-surface font-body selection:bg-primary/30 min-h-screen flex flex-col items-center justify-center p-6">
+<div class="star-field">
+<div class="star w-px h-px top-[10%] left-[20%]"></div>
+<div class="star w-0.5 h-0.5 top-[30%] left-[80%]"></div>
+<div class="star w-px h-px top-[70%] left-[40%]"></div>
+<div class="star w-0.5 h-0.5 top-[50%] left-[10%]"></div>
+<div class="star w-px h-px top-[90%] left-[90%]"></div>
+<div class="star w-px h-px top-[15%] left-[65%]"></div>
+<div class="star w-0.5 h-0.5 top-[85%] left-[25%]"></div>
+</div>
+<div class="absolute top-12 flex flex-col items-center">
+<div class="w-24 h-24 mb-6 floating-moon">
+<img alt="Crescent Moon" class="w-full h-full object-contain" data-alt="a glowing iridescent crescent moon floating in a dark cosmic void with soft purple nebula highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeW_TJwblAnTeNtRPR9pkWF4e3gw6kzFMIqzBagCn7bn8zV8khlnJO-ixZ5InHviTuIXv6DnWivDqSH3ByNVNhVHmzbRcKXp9CaVDfRZ0VLefSOwLN8JiT1iBGA4Ds7H2UH_lDJvb91WEoxSYc1M5PIV64mqLrcJNPwgd0GFFkG8Sja145Euy5b9h4hs8ybw2PTEbNzQ1KCu3_LJjwPSOELGr_gT7SJntLSc9jmLifgvlLbAhHzvlqmlaS68HRoWIuw-Bw8Z3H8KQ"/>
+</div>
+<h1 class="font-serif text-5xl md:text-6xl text-primary-fixed tracking-tight italic">
+            DreamContinuator
+        </h1>
+</div>
+<main class="w-full max-w-[440px] mt-24">
+<div class="glass-card rounded-xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
+<div class="flex flex-col gap-6">
+<div class="text-center mb-2">
+<p class="font-label text-xs uppercase tracking-[0.2em] text-on-surface-variant">Log into the repository</p>
+</div>
+<button class="w-full h-14 bg-white text-black rounded-full flex items-center justify-center gap-3 font-label text-sm uppercase tracking-wider hover:bg-slate-100 transition-colors duration-300">
+<img alt="Google Logo" class="w-5 h-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDA8pXM1qxMe4S_03RZBcwdmOM1J1G0iqOByqhGp5oe2Kpch-wrnsANKXIgN7zxXQ7FYmdSbD7fVMMo0re_RcFd1UpWUlr3JQFmjmwoxJWy3-xfsuXi-__BUM8nr0XBNaIt47PIOcmB8PiK_Bkg-BlsqkAKAyJ-ZGFQ6bCpcQuZUJtindNg70CY9VrDnrO1cA8jPIdCuvXV7tfR5C_iyVGRajaw6Cf_tK-RVGItHe262sF_u_sLgd_rQZ8E0A7Uj4EnXYJZEuQElHU"/>
+                    Continue with Google
+                </button>
+<div class="flex items-center gap-4 my-2">
+<div class="h-px flex-1 bg-outline-variant opacity-20"></div>
+<span class="font-label text-[10px] uppercase tracking-widest text-outline">or</span>
+<div class="h-px flex-1 bg-outline-variant opacity-20"></div>
+</div>
+<form class="flex flex-col gap-6">
+<div class="relative group">
+<label class="font-label text-[10px] uppercase tracking-widest text-outline mb-1 block">Vessel (Email)</label>
+<input class="w-full bg-surface-container-lowest/50 border-0 border-b border-outline-variant/30 text-on-surface font-label text-sm py-3 px-0 focus:ring-0 focus:border-primary transition-all placeholder:text-outline/40" placeholder="identity@subconscious.net" type="email"/>
+</div>
+<div class="relative group">
+<label class="font-label text-[10px] uppercase tracking-widest text-outline mb-1 block">Cipher (Password)</label>
+<input class="w-full bg-surface-container-lowest/50 border-0 border-b border-outline-variant/30 text-on-surface font-label text-sm py-3 px-0 focus:ring-0 focus:border-primary transition-all placeholder:text-outline/40" placeholder="••••••••" type="password"/>
+</div>
+<div class="flex justify-end">
+<a class="font-label text-[10px] uppercase tracking-widest text-primary-fixed-dim hover:text-primary transition-colors" href="#">
+                            Forgot Password?
+                        </a>
+</div>
+<button class="w-full py-4 rounded-full bg-gradient-to-r from-primary to-primary-dim text-on-primary font-label text-sm uppercase tracking-widest font-bold shadow-lg shadow-primary/20 hover:scale-[0.98] active:scale-95 transition-all duration-200 glow-pulse" type="submit">
+                        Sign In
+                    </button>
+</form>
+<div class="text-center pt-4">
+<p class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant">
+                        First time here? 
+                        <a class="text-primary-fixed ml-1 hover:underline" href="#">Register your soul</a>
+</p>
+</div>
+</div>
+<div class="absolute -bottom-10 -right-10 w-32 h-32 bg-primary/5 rounded-full blur-3xl"></div>
+<div class="absolute -top-10 -left-10 w-32 h-32 bg-secondary/5 rounded-full blur-3xl"></div>
+</div>
+<footer class="mt-12 text-center">
+<p class="font-label text-[10px] uppercase tracking-[0.3em] text-outline/40">
+                © 2024 The Celestial Archive
+            </p>
+</footer>
+</main>
+</body></html>

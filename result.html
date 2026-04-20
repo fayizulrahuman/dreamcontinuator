@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dream Result - DreamContinuator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="result">
+  <div id="stars"></div>
+  <div id="mood-glow"></div>
+  
+  <div class="spinner-overlay hidden" id="loading-spinner">
+    <div class="spinner"></div>
+    <div class="dream-text">Translating whispers...</div>
+  </div>
+
+  <nav>
+    <a href="index.html" class="logo" style="color: inherit;">DreamContinuator</a>
+    <div class="user-menu">
+      <div class="avatar" id="user-avatar">?</div>
+      <span id="user-name">User</span>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="flex justify-between items-center" style="margin-bottom: 20px;">
+      <a href="log-dream.html">&larr; Log Another</a>
+      <a href="archive.html">View Archive &rarr;</a>
+    </div>
+
+    <div class="card glass-panel" style="margin-bottom: 30px;">
+      <div class="mood-tag" id="result-mood" style="margin-bottom: 20px;"></div>
+      <blockquote class="fragment-quote" id="result-fragment"></blockquote>
+      <div class="continuation-text" id="result-continuation"></div>
+    </div>
+
+    <div class="card glass-panel">
+      <h3>Translate This Dream 🌐</h3>
+      <div class="translate-panel">
+        <div class="translate-controls">
+          <input type="text" id="language-search" placeholder="Search language..." style="flex: 1;">
+          <select id="language-select" style="flex: 2;">
+            <!-- Options injected by JS -->
+          </select>
+          <button id="translate-btn" class="primary">Translate &rarr;</button>
+        </div>
+        <div id="translation-error" class="error-msg"></div>
+        <div id="translation-result" class="translation-result">
+          <div class="flag-badge" id="translation-badge"></div>
+          <div class="continuation-text" id="translation-text"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="script.js?v=8"></script>
+</body>
+</html>
