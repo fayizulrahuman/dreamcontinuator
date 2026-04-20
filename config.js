@@ -1,17 +1,25 @@
 // config.js
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDxjiSJgrHyYvd8iw5d7B3bnrLDHF307mg",
-  authDomain: "dreamcontinuator.firebaseapp.com",
-  projectId: "dreamcontinuator",
-  storageBucket: "dreamcontinuator.firebasestorage.app",
-  messagingSenderId: "82712667754",
-  appId: "1:82712667754:web:8f3b4b5b5cbf9531638c13"
+  apiKey: "AIzaSyACaJSLguwiMKUlTROo3MA-uL5ORu6RZ5Y",
+  authDomain: "login-d684e.firebaseapp.com",
+  projectId: "login-d684e",
+  storageBucket: "login-d684e.firebasestorage.app",
+  messagingSenderId: "607768048141",
+  appId: "1:607768048141:web:4116e767a3fe9093c5db44"
 };
 
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
 // Gemini API Configuration
-const GEMINI_API_KEY = "AIzaSyBvNKi2yvxiB-JweStjq6az__l-RssU9pM"; // Replace with your actual key
-const GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1";
+const GEMINI_API_KEY = "AIzaSyACuks9sEURx6kAOawb-fJpjDhmqi-8xNY"; // Replace with your actual key
+const GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=$";
 
 // Add these lines below
 const GEMINI_MODEL = "gemini-2.5-flash";
