@@ -17,17 +17,6 @@ const languages = [
 const page = document.body.dataset.page;
 const spinner = document.getElementById('loading-spinner');
 
-function getApiKey() {
-  let key = localStorage.getItem('gemini_api_key');
-  if (!key) {
-    key = window.prompt("To generate and translate dreams, please enter your Gemini API Key.\n\n(It will be saved locally in your browser.)");
-    if (key) {
-      localStorage.setItem('gemini_api_key', key.trim());
-    }
-  }
-  return key ? key.trim() : "";
-}
-
 function showSpinner() {
   if(spinner) spinner.classList.remove('hidden');
 }
@@ -232,10 +221,7 @@ if(page === 'log-dream') {
     showSpinner();
 
     try {
-      const apiKey = getApiKey();
-      if (!apiKey) throw new Error("API Key is required. Please reload and provide a valid key.");
-
-      const response = await fetch(`${GEMINI_API_URL}/models/${GEMINI_MODEL}:generateContent?key=${apiKey}`, {
+      const response = await fetch(`${GEMINI_API_URL}/models/${GEMINI_MODEL}:generateContent?key=${GEMINI_API_KEY}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -252,9 +238,6 @@ if(page === 'log-dream') {
 
       if(!response.ok) {
         const errData = await response.json();
-        if (response.status === 400 || (errData.error && errData.error.message && errData.error.message.toLowerCase().includes("api key"))) {
-          localStorage.removeItem('gemini_api_key');
-        }
         console.error("API Error Response:", errData);
         throw new Error(`API Error: ${errData.error?.message || response.statusText}`);
       }
@@ -329,10 +312,7 @@ function setupTranslator(textToTranslate) {
     btn.innerText = 'Translating...';
 
     try {
-      const apiKey = getApiKey();
-      if (!apiKey) throw new Error("API Key is required. Please reload and provide a valid key.");
-
-      const response = await fetch(`${GEMINI_API_URL}/models/${GEMINI_MODEL}:generateContent?key=${apiKey}`, {
+      const response = await fetch(`${GEMINI_API_URL}/models/${GEMINI_MODEL}:generateContent?key=${GEMINI_API_KEY}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -349,9 +329,6 @@ function setupTranslator(textToTranslate) {
 
       if(!response.ok) {
         const errData = await response.json();
-        if (response.status === 400 || (errData.error && errData.error.message && errData.error.message.toLowerCase().includes("api key"))) {
-          localStorage.removeItem('gemini_api_key');
-        }
         console.error("API Error Response:", errData);
         throw new Error(`API Error: ${errData.error?.message || response.statusText}`);
       }
