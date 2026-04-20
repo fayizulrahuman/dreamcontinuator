@@ -11,7 +11,7 @@ const firebaseConfig = {
 
 // Gemini API Configuration
 const GEMINI_API_KEY = "AIzaSyBvNKi2yvxiB-JweStjq6az__l-RssU9pM"; // Replace with your actual key
-const GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta";
+const GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1";
 
 // Add these lines below
 const GEMINI_MODEL = "gemini-2.5-flash";
